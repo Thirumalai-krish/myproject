@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Department implements Serializable{
 	private String dname;
-        System.out.println("hi");
+      
 	public Department() {
 		super();
 	}
