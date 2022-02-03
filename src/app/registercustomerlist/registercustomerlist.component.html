@@ -1,0 +1,44 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Rid</th>
+        <th scope="col">Firstname</th>
+        <th scope="col">Lastname</th>
+        <th scope="col">Username</th>
+        <th scope="col">City</th>
+        <th scope="col">State</th>
+        <th scope="col">Zip</th>
+        <th scope="col">Mobileno</th>
+        <th scope="col">Distributername</th>
+       
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
+        <th scope="col">Action</th> 
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let reg of register">
+        
+          <th scope="row"></th>
+          <td><a routerLink="/updateregisterlist/{{ reg.rid }}" routerLinkActive="active">{{ reg.rid }}</a></td>
+          <td>{{ reg.firstname }}</td>
+          <td>{{ reg.lastname }}</td>
+          <td>{{ reg.username }}</td>
+          
+          <td>{{ reg.city }}</td>
+          <td>{{ reg.state }}</td>
+          <td>{{ reg.zip }}</td>
+          <td>{{ reg.mobileno }}</td>
+          <td>{{ reg.distributername }}</td>
+          <td><a href="mailto:thiru102000@gmail.com">{{ reg.email }}</a></td>
+          <td>{{ reg.password }}</td>
+          
+          
+  
+          <td><button type="button" (click)="onDelete(reg)"class="btn btn-outline-danger">Remove User</button></td>
+       
+      </tr>
+    </tbody>
+  </table>

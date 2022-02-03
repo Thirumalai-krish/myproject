@@ -1,0 +1,186 @@
+<div class="container">
+    <div class="col align-self-center">
+      <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+        <div class="form-group">
+
+            <label for="rid" class="col-sm-2 col-form-label"> Rid</label>
+            <input
+              type="number"
+              class="form-control"
+              [(ngModel)]="employeeData.rid"
+              name="txtrid"
+              #rid="ngModel"
+              pattern="^[a-zA-Z\s]{1,15}$"
+              required
+            />
+        </div>
+          
+          <span
+            *ngIf="rid.invalid && rid.touched"
+            class="error form-control-feedback"
+            >Enter your rid</span
+          >
+
+
+          <div class="form-group">
+          <label for="firstname" class="col-sm-2 col-form-label"> first Name</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="employeeData.firstname"
+            name="txtfirstname"
+            #firstname="ngModel"
+            pattern="^[a-zA-Z\s]{1,15}$"
+            required
+          />
+          </div>
+       
+        <span
+          *ngIf="firstname.invalid && firstname.touched"
+          class="error form-control-feedback"
+          >Enter your firstname</span
+        >
+
+        <label for="lastname" class="col-sm-2 col-form-label"> last Name</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="employeeData.lastname"
+          name="txtlastname"
+          #lastname="ngModel"
+          pattern="^[a-zA-Z\s]{1,15}$"
+          required
+        />
+      
+      <span
+        *ngIf="lastname.invalid && lastname.touched"
+        class="error form-control-feedback"
+        >Enter your lastname</span>
+
+
+
+        <label for="username" class="col-sm-2 col-form-label">Enter Your username</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="employeeData.username"
+          name="txtusername"
+          #username="ngModel"
+          pattern="^[a-zA-Z\s]{1,15}$"
+          required
+        />
+      
+      <span
+        *ngIf="username.invalid && username.touched"
+        class="error form-control-feedback"
+        >Enter your username</span
+      >
+       
+        
+      >
+      <label for="city" class="col-sm-2 col-form-label">Enter Your City</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="employeeData.city"
+        name="txtcity"
+        #city="ngModel"
+        pattern="^[a-zA-Z\s]{1,15}$"
+        required
+      />
+  
+    <span
+      *ngIf="city.invalid && city.touched"
+      class="error form-control-feedback"
+      >Enter your city</span
+    >
+    <div class="form-group">
+    <label for="state" class="col-sm-2 col-form-label"> state</label>
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="employeeData.state"
+      name="txtstate"
+      #state="ngModel"
+      pattern="^[a-zA-Z\s]{1,15}$"
+      required
+    />
+  </div>
+  <span
+    *ngIf="state.invalid && state.touched"
+    class="error form-control-feedback"
+    >Enter your state</span>
+    <div class="form-group">
+    <label for="zip" class="col-sm-2 col-form-label"> zip</label>
+    <input
+      type="number"
+      class="form-control"
+      [(ngModel)]="employeeData.zip"
+      name="txtzip"
+      #zip="ngModel"
+      pattern="^[a-zA-Z\s]{1,15}$"
+      required
+    />
+  </div>
+  <span
+    *ngIf="zip.invalid && zip.touched"
+    class="error form-control-feedback"
+    >Enter your zip</span>
+    <div class="form-group">
+    <label for="mobileno" class="col-sm-2 col-form-label">mobileno</label>
+    <input
+      type="number"
+      class="form-control"
+      [(ngModel)]="employeeData.mobileno"
+      name="txtmobileno"
+      #mobileno="ngModel"
+      pattern="^[a-zA-Z\s]{1,15}$"
+      required
+    />
+  </div>
+  <span
+    *ngIf="mobileno.invalid && mobileno.touched"
+    class="error form-control-feedback"
+    >Enter your mobileno</span>
+        
+    
+    <div class="form-group">
+    <label for="distributername" class="col-sm-2 col-form-label"> distributerName</label>
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="employeeData.distributername"
+      name="txtdistributername"
+      #distributername="ngModel"
+      pattern="^[a-zA-Z\s]{1,15}$"
+      required
+    />
+  </div>
+  <span
+    *ngIf="distributername.invalid && distributername.touched"
+    class="error form-control-feedback"
+    >Enter your distributername</span>
+        
+        
+        
+        <div class="form-group">
+          <button
+            (click)="updateRegister()"
+            
+            type="button"
+            class="btn btn-primary"
+          >
+            Update Registerlist
+          </button>
+        </div>
+        <div class="alert alert-danger" role="alert" *ngIf="submitted">
+          Please fill all the fields
+        </div>
+        </form>
+        </div>
+        </div>
+        
+        
+  
+    
+  

@@ -1,0 +1,158 @@
+<<section class="gradient-custom">
+	<div class="container py-5 h-100">
+	  <div class="row justify-content-center align-items-center h-100">
+		<div class="col-12 col-lg-9 col-xl-7">
+
+		  <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+        
+			<div class="card"> 
+        <cdk-virtual-scroll-viewport itemSize="100" class="container">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" left = "40" right="50" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+          <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+          <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/></svg>
+			  <b><h2 class="text-center mb-4 pb-2 pb-md-0 mb-md-5">
+        REGISTER YOURSELF</h2></b>
+			  
+			  <form [formGroup]="registerForm" (ngSubmit)="ngSubmit()">
+
+				<div class="mb-2 row">
+					<label for="firstname" class="col-sm-5 col-form-label">First Name</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="firstname" placeholder="Enter Your firstName" 
+							formControlName="firstname" required/>
+					</div>
+					<div class="text-danger" *ngIf="registerForm.controls['firstname'].invalid && registerForm.controls['firstname'].touched">
+						Customer name is required.
+					</div>
+				  </div>
+
+          <div class="mb-2 row">
+            <label for="lastname" class="col-sm-5 col-form-label">Last Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control"   id="lastname" placeholder="Enter Your lastName" 
+                formControlName="lastname" required/>
+            </div>
+            <div class="text-danger" *ngIf="registerForm.controls['lastname'].invalid && registerForm.controls['lastname'].touched">
+              Customer Name is required.
+            </div>
+            </div>
+
+            <div class="mb-2 row">
+              <label for="username" class="col-sm-5 col-form-label">username</label>
+              <div class="col-sm-10">
+                
+                <input type="text" class="form-control" id="username"  placeholder="Enter username" 
+                  formControlName="username" required/>
+              </div>
+              <div class="text-danger" *ngIf="registerForm.controls['username'].invalid && registerForm.controls['username'].touched">
+                 UserName is required.
+              </div>
+              </div>
+
+
+
+            <div class="mb-2 row">
+              <label for="city" class="col-sm-5 col-form-label">Enter Your City</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="city" formControlName="city">
+              </div>
+              <div class="text-danger" *ngIf="registerForm.controls['city'].invalid && registerForm.controls['city'].touched">
+                city is required.
+              </div>
+              </div>
+
+              <div class="mb-2 row">
+                <label for="state" class="col-sm-5 col-form-label">Enter Your State</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="state" formControlName="state">
+                </div>
+                <div class="text-danger" *ngIf="registerForm.controls['state'].invalid && registerForm.controls['state'].touched">
+                  State is required.
+                </div>
+                </div>
+
+                <div class="mb-2 row">
+                  <label for="zip" class="col-sm-5 col-form-label">Enter zip code</label>
+                  <div class="col-sm-10">
+                    <input type="number" class="form-control" id="zip" formControlName="zip">
+                  </div>
+                  <div class="number-danger" *ngIf="registerForm.controls['zip'].invalid && registerForm.controls['zip'].touched">
+                    zip is required.
+                  </div>
+                  </div>
+                
+
+           
+              <div class="mb-2 row">
+                <label for="mobileno" class="col-sm-5 col-form-label">Enter Mobile Number</label>
+                <div class="col-sm-10">
+                  <input type="number" class="form-control" id="mobileno" formControlName="mobileno">
+                </div>
+
+            <div class="mb-2 row">
+              <label for="distributername" class="col-sm-5 col-form-label">Distributer Name</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="distributername" placeholder="Enter Your distributerName" 
+                  formControlName="distributername" required/>
+              </div>
+              <div class="text-danger" *ngIf="registerForm.controls['distributername'].invalid && registerForm.controls['distributername'].touched">
+                distributer Name  is required.
+              </div>
+			
+					
+				  
+         
+					
+				
+				 
+				
+
+         
+
+     <div class="mb-2 row">
+              <label for="staticEmail" class="col-sm-5 col-form-label">Email</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="email" placeholder="Enter your mail" 
+                formControlName="email" required/>
+              </div>
+              <div class="text-danger" *ngIf="registerForm.controls['email'].invalid && registerForm.controls['email'].touched">
+                Email is required.
+              </div>
+            </div>
+
+
+            <div class="mb-2 row">
+              <label for="inputPassword" class="col-sm-5 col-form-label">Password</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" id="password" placeholder="Type a password" 
+                formControlName="password" required/>
+              </div>
+              <div class="text-danger" *ngIf="registerForm.controls['password'].invalid && registerForm.controls['password'].touched">
+                password is required.
+              </div>
+              </div>
+             
+              
+              
+            
+				  
+				  <div class="text-center mt-4">
+					<button type="submit" (click)="addbooking()" routerLink="/registercustomerlist" [disabled]="!registerForm.valid" class="btn btn-primary btn-lg"
+					  style="margin:10px;">Register Here </button>
+				  </div>
+            
+         </div>
+         
+         </div>
+        </form>
+      </cdk-virtual-scroll-viewport>
+      
+         </div>
+      
+         </div>
+       
+        </div>
+        </div>
+        </div>
+        

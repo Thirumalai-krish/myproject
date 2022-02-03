@@ -1,0 +1,104 @@
+<div class="fire">
+	<section class="gradient-custom">
+		<div class="container py-5 h-100">
+		  <div class="row justify-content-center align-items-center h-100">
+			<div class="col-12 col-lg-9 col-xl-7">
+			  <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+				<div class="card"> 
+				  <h3 class="text-center mb-4 pb-2 pb-md-0 mb-md-5">Book Your Cylinders</h3>
+				  
+				  <form [formGroup]="bookingForm" (ngSubmit)="ngSubmit()">
+					
+					<div class="mb-2 row">
+						<label for="ctype" class="col-sm-5 col-form-label">Customer Type</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="ctype" placeholder="Enter Your Type" 
+								formControlName="ctype" required/>
+						</div>
+						<div class="text-danger" *ngIf="bookingForm.controls['ctype'].invalid && bookingForm.controls['ctype'].touched">
+							Customer Type is required.
+						</div>
+					  </div>
+			  <div class="mb-2 row">
+				<label for="cname" class="col-sm-5 col-form-label">Customer Name</label>
+				<div class="col-sm-10">
+				  <input type="text" class="form-control" id="cname" placeholder="Enter Your Name" 
+					formControlName="cname" required/>
+				</div>
+				<div class="text-danger" *ngIf="bookingForm.controls['cname'].invalid && bookingForm.controls['cname'].touched">
+				  Customer Name is required.
+				</div>
+				</div>
+					<div class="mb-2 row">
+						<label for="staticEmail" class="col-sm-5 col-form-label">Email</label>
+						<div class="col-sm-10">
+							<input type="mail" class="form-control" id="mail" placeholder="Enter your mail" 
+							formControlName="mail" required/>
+						</div>
+						<div class="text-danger" *ngIf="bookingForm.controls['mail'].invalid && bookingForm.controls['mail'].touched">
+							Email is required.
+						</div>
+					</div>
+						
+					  
+			  <div class="mb-2 row">
+				<label for="noofcylinders" class="col-sm-5 col-form-label">Enter No Of Cylinders</label>
+				<div class="col-sm-10">
+				  <input type="number" class="form-control" id="noofcylinders" formControlName="noofcylinders">
+				</div>
+				<div class="number-danger" *ngIf="bookingForm.controls['noofcylinders'].invalid && bookingForm.controls['noofcylinders'].touched">
+				  noofcylinders is required.
+				</div>
+				</div>
+					  
+						
+					
+					  <div class="mb-2 row">
+						<label for="date" class="col-sm-5 col-form-label">Enter Your City</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="city" formControlName="city">
+						</div>
+						<div class="text-danger" *ngIf="bookingForm.controls['city'].invalid && bookingForm.controls['city'].touched">
+							city is required.
+						</div>
+					  </div>
+					  
+					  <div class="text-center mt-4">
+						<button type="submit" (click)="addbooking()" routerLink="/status" [disabled]="!bookingForm.valid" class="btn btn-primary btn-lg"
+						  style="margin:10px;">Add Your Booking</button>
+					  </div>
+					  </form>
+			  
+			  </div>
+			 
+			  </div>
+			  </div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>		  
+	</div>

@@ -1,0 +1,20 @@
+.id
+{
+      color: rgb(255, 0, 0);
+      font-size: 50px;}
+.id1
+{
+    color:rgb(0, 89, 255)
+}
+.id3
+{
+    color:brown
+}
+.id4
+{
+    color:green
+}
+.grad
+{
+    background-image: linear-gradient(rgb(42, 207, 199),pink, rgb(245, 245, 82));
+}
